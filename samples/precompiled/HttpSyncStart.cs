@@ -35,8 +35,8 @@ namespace VSSample
             return await starter.WaitForCompletionOrCreateCheckStatusResponseAsync(
                 req,
                 instanceId,
-                timeout,
-                retryInterval);
+                timeout.Value,
+                retryInterval.Value);
         }
 
         private static TimeSpan? GetTimeSpan(HttpRequestMessage request, string queryParameterName)
